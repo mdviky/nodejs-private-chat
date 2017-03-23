@@ -1,8 +1,9 @@
 var app = require('http').createServer(handler)
         , io = require('socket.io').listen(app)
-        , fs = require('fs')
+        , fs = require('fs');
+var port = process.env.PORT || 3000;
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log('starting at 3000');
 });
 
